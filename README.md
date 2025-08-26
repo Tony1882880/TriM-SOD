@@ -12,11 +12,9 @@ The acquisition and application of spacecraft optical data is an important part 
 
 ## ✨ Highlights
 
-- 🔭 **Multi-modal coverage:** Visible-light **and** infrared imagery; supports cross-modal training and evaluation.
-- 🧩 **Multi-task supervision:** Unified annotations for **spacecraft detection** and **component-level semantic segmentation**.
-- 📐 **Multi-scale targets:** Broad size distribution (small/medium/large) to stress-test scale robustness and long-range perception.
-- 🧪 **Benchmark-ready:** Public release with **official splits** (`train.txt`, `val.txt`) for reproducible comparisons.
-- 🗃️ **Practical organization:** Straightforward folder layout; compatible with common detection/segmentation toolchains.
+- 🔭 **Multi-modal coverage:** **Visible-light** and **infrared** imagery; supports cross-modal training and evaluation.
+- 🧩 **Multi-task supervision:** Annotations for **spacecraft detection** and **spacecraft component segmentation**.
+- 📐 **Multi-scale targets:** Broad size distribution (small/medium/large).
 
 ---
 
@@ -34,7 +32,6 @@ The dataset is large and released as **six parts** on Kaggle:
   - 🔗 <https://www.kaggle.com/datasets/tonyyyyzhu/trim-sod-supp4>  
   - 🔗 <https://www.kaggle.com/datasets/tonyyyyzhu/trim-sod-supp5>
 
-> ℹ️ **Note:** Download **all six** parts and extract them into the **same root directory** so their contents are merged.
 
 ---
 
@@ -79,13 +76,6 @@ TriM-SOD/
 ├─ train.txt
 └─ val.txt
 ```
-
-- 📷 **`visible-light images/`**: RGB images  
-- 🌡️ **`infrared images/`**: IR images  
-- 🧭 **`component segmentation labels/`**: per-component segmentation annotations  
-- 🎯 **`detection labels/`**: bounding-box annotations for spacecraft detection  
-- 🗒️ **`other labels/`**: additional labels/metadata if provided  
-- 🧾 **`train.txt`**, **`val.txt`**: official split lists (typically **relative paths**, one per line)
 
 
 ---
