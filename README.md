@@ -69,6 +69,8 @@ kaggle datasets download -d tonyyyyzhu/trim-sod-supp5   -p data/ --unzip
 
 > Place all six downloads under the same root so they merge into this structure:
 
+<details>
+<summary>TriM-SOD</summary>
 TriM-SOD/
 ├─ visible-light images/
 ├─ infrared images/
@@ -77,6 +79,7 @@ TriM-SOD/
 ├─ other labels/
 ├─ train.txt
 └─ val.txt
+</details>
 
 - 📷 **`visible-light images/`**: RGB images  
 - 🌡️ **`infrared images/`**: IR images  
