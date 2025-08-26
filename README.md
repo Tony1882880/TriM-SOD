@@ -18,6 +18,15 @@ The acquisition and application of spacecraft optical data is an important part 
 
 ---
 
+## 🧪 Benchmark Code in This Repo
+
+- This repository contains the **benchmark implementations** for **spacecraft detection** and **spacecraft component segmentation** on **TriM-SOD**.
+- The codebase is **primarily adapted from [MMSegmentation](https://github.com/open-mmlab/mmsegmentation)** (data pipelines, configuration system, training/validation/evaluation utilities).  
+  We added dataset adapters and task-specific components for TriM-SOD.
+- Please keep the original attributions in the headers where present, and **comply with MMSegmentation’s license and usage terms** when using or redistributing derived code.
+
+---
+
 ## 📦 Dataset Access (Kaggle)
 
 The dataset is large and released as **six parts** on Kaggle:
