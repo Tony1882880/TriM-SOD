@@ -1,26 +1,26 @@
-# TriM-SOD: A Multi-modal, Multi-task, and Multi-scale Spacecraft Optical Dataset
+# 🛰️ TriM-SOD: A Multi-modal, Multi-task, and Multi-scale Spacecraft Optical Dataset
 
 > A public benchmark for space-based situational awareness (SSA) with visible-light and infrared imagery, multi-task labels, and broad target-size diversity.
 
 ---
 
-## Abstract
+## 📝 Abstract
 
 The acquisition and application of spacecraft optical data is an important part of space-based situational awareness (SSA). Spacecraft optical data processing techniques can assist in tasks such as on-orbit operation, space debris removal, deep space exploration, \textit{etc}. However, the extreme lack of real spacecraft optical data is an insurmountable difficulty, which hinders the development of deep learning-based data processing techniques. Existing synthetic datasets usually only contain visible-light images, only support a specific task, and lack diversity in the scale of the spacecraft, which cannot adapt to actual application environments. Therefore, we propose a Multi-modal, Multi-task, and Multi-scale Spacecraft Optical Dataset (TriM-SOD), which has three superiorities: (a) Multi-modal: It includes data in various modals, such as visible-light and infrared; (b) Multi-task: It includes labels for multiple tasks, such as spacecraft detection and spacecraft component segmentation; (c) Multi-scale: It features a variety of sizes for spacecraft in the images. To validate the effectiveness of our dataset and evaluate the performance of methods in the tasks, we use TriM-SOD to train and test several typical or recent methods for object detection and semantic segmentation. TriM-SOD has been made public and can be used as a benchmark to further promote the future development of SSA.
 
 ---
 
-## Highlights
+## ✨ Highlights
 
-- **Multi-modal coverage:** Visible-light **and** infrared imagery; supports cross-modal training and evaluation.
-- **Multi-task supervision:** Unified annotations for **spacecraft detection** and **component-level semantic segmentation**.
-- **Multi-scale targets:** Broad size distribution (small/medium/large) to stress-test scale robustness and long-range perception.
-- **Benchmark-ready:** Public release with **official splits** (`train.txt`, `val.txt`) to ensure reproducible comparisons.
-- **Practical organization:** Straightforward folder layout; compatible with common detection/segmentation toolchains.
+- 🔭 **Multi-modal coverage:** Visible-light **and** infrared imagery; supports cross-modal training and evaluation.
+- 🧩 **Multi-task supervision:** Unified annotations for **spacecraft detection** and **component-level semantic segmentation**.
+- 📐 **Multi-scale targets:** Broad size distribution (small/medium/large) to stress-test scale robustness and long-range perception.
+- 🧪 **Benchmark-ready:** Public release with **official splits** (`train.txt`, `val.txt`) for reproducible comparisons.
+- 🗃️ **Practical organization:** Straightforward folder layout; compatible with common detection/segmentation toolchains.
 
 ---
 
-## Dataset Access (Kaggle)
+## 📦 Dataset Access (Kaggle)
 
 The dataset is large and released as **six parts** on Kaggle:
 
@@ -34,33 +34,71 @@ The dataset is large and released as **six parts** on Kaggle:
   - 🔗 <https://www.kaggle.com/datasets/tonyyyyzhu/trim-sod-supp4>  
   - 🔗 <https://www.kaggle.com/datasets/tonyyyyzhu/trim-sod-supp5>
 
-> **Note:** Download **all six** parts and extract them into the **same root directory** so their contents are merged.
+> ℹ️ **Note:** Download **all six** parts and extract them into the **same root directory** so their contents are merged.
 
 ---
 
-## Quick Download (Kaggle CLI)
+## ⬇️ Quick Download (Kaggle CLI)
 
 1) **Install & authenticate**
-```bash
+
+~~~bash
 pip install kaggle
 # Then place kaggle.json (Account → Create New API Token) at:
 # Linux/Mac: ~/.kaggle/kaggle.json    Windows: %USERPROFILE%\.kaggle\kaggle.json
 chmod 600 ~/.kaggle/kaggle.json  # Linux/Mac only
+~~~
+
+2) **Download all parts (to ./data)**
+
+~~~bash
+# Main
+kaggle datasets download -d tonyyyyzhu/trim-sod-a-spacecraft-optical-dataset -p data/ --unzip
+
+# Supplements (mostly visible-light additions)
+kaggle datasets download -d tonyyyyzhu/trim-sod-supp1   -p data/ --unzip
+kaggle datasets download -d tonyyyyzhu/trim-sod-supp-2  -p data/ --unzip
+kaggle datasets download -d tonyyyyzhu/trim-sod-supp3   -p data/ --unzip
+kaggle datasets download -d tonyyyyzhu/trim-sod-supp4   -p data/ --unzip
+kaggle datasets download -d tonyyyyzhu/trim-sod-supp5   -p data/ --unzip
+~~~
+
+---
+
+## 🗂️ Folder Structure
+
+> Place all six downloads under the same root so they merge into this structure:
+
+TriM-SOD/
+├─ visible-light images/
+├─ infrared images/
+├─ component segmentation labels/
+├─ detection labels/
+├─ other labels/
+├─ train.txt
+└─ val.txt
+
+- 📷 **`visible-light images/`**: RGB images  
+- 🌡️ **`infrared images/`**: IR images  
+- 🧭 **`component segmentation labels/`**: per-component segmentation annotations  
+- 🎯 **`detection labels/`**: bounding-box annotations for spacecraft detection  
+- 🗒️ **`other labels/`**: additional labels/metadata if provided  
+- 🧾 **`train.txt`**, **`val.txt`**: official split lists (typically **relative paths**, one per line)
 
 
-### Citation
+---
 
-If you use TriM‑SOD in your research, please cite the accompanying
-paper:
+## 📚 Citation
 
-```
+If you use **TriM-SOD** in your research, please cite the accompanying paper:
+
+~~~bibtex
 @article{TriM-SOD,
-  title={TriM‑SOD: A Multi‑modal, Multi‑task, and Multi‑scale Spacecraft Optical Dataset},
-  author={Zhu, Tianyu and Li, Hesong and Fu, Ying},
-  journal={Space: Science \& Technology},
-  year={2025},
-  publisher={AAAS}
+  title   = {TriM-SOD: A Multi-modal, Multi-task, and Multi-scale Spacecraft Optical Dataset},
+  author  = {Zhu, Tianyu and Li, Hesong and Fu, Ying},
+  journal = {Space: Science \& Technology},
+  year    = {2025},
+  publisher = {AAAS}
 }
-```
+~~~
 
-TriM‑SOD is released under the MIT License (see `LICENSE`).
