@@ -1,81 +1,52 @@
-## TriM-SOD: A Multi‑modal, Multi‑task and Multi‑scale Spacecraft Optical Dataset
+# TriM-SOD: A Multi-modal, Multi-task, and Multi-scale Spacecraft Optical Dataset
 
-TriM‑SOD is a large benchmark designed to advance computer vision research for
-spacecraft observation and situational awareness.  The dataset brings
-together multi‑modal imagery, annotations for multiple tasks and samples
-captured at different spatial resolutions.  Researchers can use TriM‑SOD to
-train and evaluate algorithms for object detection, semantic segmentation,
-component segmentation and classification across a wide range of spacecraft
-types and imaging conditions.
+> A public benchmark for space-based situational awareness (SSA) with visible-light and infrared imagery, multi-task labels, and broad target-size diversity.
 
-### Key features
+---
 
-* **Multi‑modal data** – each observation includes both visible–light and
-  infrared imagery.  Visible images come from optical sensors on board a
-  variety of space‑borne platforms, while the infrared modality captures
-  thermal emissions.  These complementary signals help algorithms cope with
-  low‑light conditions, occlusions and varying spacecraft surface materials.
-* **Multiple tasks** – TriM‑SOD contains annotations for object detection
-  (bounding boxes around spacecraft and sub‑components) and detailed
-  component segmentation masks.  A small set of high‑level class labels
-  indicate the type of spacecraft (e.g. Earth observation satellite,
-  planetary probe) for classification experiments.
-* **Multi‑scale** – images were captured under different imaging distances and
-  sensor resolutions.  Some examples show full spacecraft at far distances
-  while others zoom in on individual components.  This diversity makes the
-  dataset suitable for both small‑object and large‑object detection.
-* **Large scale** – the first public release comprises approximately
-  **209 GB** of data split into **438 k files**.  The training split
-  (`train.txt`) lists several hundred thousand samples and the
-  validation split (`val.txt`) contains held‑out examples for evaluation.
+## Abstract
 
-### Data organisation
+The acquisition and application of spacecraft optical data is an important part of space-based situational awareness (SSA). Spacecraft optical data processing techniques can assist in tasks such as on-orbit operation, space debris removal, deep space exploration, \textit{etc}. However, the extreme lack of real spacecraft optical data is an insurmountable difficulty, which hinders the development of deep learning-based data processing techniques. Existing synthetic datasets usually only contain visible-light images, only support a specific task, and lack diversity in the scale of the spacecraft, which cannot adapt to actual application environments. Therefore, we propose a Multi-modal, Multi-task, and Multi-scale Spacecraft Optical Dataset (TriM-SOD), which has three superiorities: (a) Multi-modal: It includes data in various modals, such as visible-light and infrared; (b) Multi-task: It includes labels for multiple tasks, such as spacecraft detection and spacecraft component segmentation; (c) Multi-scale: It features a variety of sizes for spacecraft in the images. To validate the effectiveness of our dataset and evaluate the performance of methods in the tasks, we use TriM-SOD to train and test several typical or recent methods for object detection and semantic segmentation. TriM-SOD has been made public and can be used as a benchmark to further promote the future development of SSA.
 
-The dataset is structured into several top‑level folders:
+---
 
-```
-TriM‑SOD/
-├── visible‑light images_1/    # optical RGB images
-├── infrared images/           # thermal IR images
-├── component segmentation/    # pixel‑wise masks for components
-├── detection labels/          # bounding‑box annotations
-├── other labels/              # additional metadata
-├── train.txt                  # list of training sample identifiers
-└── val.txt                    # list of validation sample identifiers
-```
+## Highlights
 
-Each line in `train.txt` or `val.txt` refers to a particular
-observation (for example, `Maven_camD17_79` or `Aquarius_camD13_76`).  The
-prefix denotes the satellite or camera name (e.g., `Maven`, `Aquarius`,
-`MRO`, `Magellan`), and the suffix is an internal identifier.  Use these
-identifiers to locate the corresponding images and annotation files in the
-respective directories.
+- **Multi-modal coverage:** Visible-light **and** infrared imagery; supports cross-modal training and evaluation.
+- **Multi-task supervision:** Unified annotations for **spacecraft detection** and **component-level semantic segmentation**.
+- **Multi-scale targets:** Broad size distribution (small/medium/large) to stress-test scale robustness and long-range perception.
+- **Benchmark-ready:** Public release with **official splits** (`train.txt`, `val.txt`) to ensure reproducible comparisons.
+- **Practical organization:** Straightforward folder layout; compatible with common detection/segmentation toolchains.
 
-### Downloading the data
+---
 
-Due to the large size of TriM‑SOD, the raw images and annotations are
-hosted on Kaggle.  You **should not attempt to store the entire dataset
-directly in this repository**.  Instead, follow the steps below to
-download the data locally using the Kaggle API:
+## Dataset Access (Kaggle)
 
-1. Install the Kaggle client:
+The dataset is large and released as **six parts** on Kaggle:
 
-   ```bash
-   pip install kaggle
-   ```
+- **Main package**  
+  - 🔗 <https://www.kaggle.com/datasets/tonyyyyzhu/trim-sod-a-spacecraft-optical-dataset>
 
-2. Generate an API token from your Kaggle account settings and place the
-   downloaded `kaggle.json` in `~/.kaggle/` with permissions set to
-   `600`.
+- **Supplementary packages** (mainly additional **visible-light** data)  
+  - 🔗 <https://www.kaggle.com/datasets/tonyyyyzhu/trim-sod-supp1>  
+  - 🔗 <https://www.kaggle.com/datasets/tonyyyyzhu/trim-sod-supp-2>  
+  - 🔗 <https://www.kaggle.com/datasets/tonyyyyzhu/trim-sod-supp3>  
+  - 🔗 <https://www.kaggle.com/datasets/tonyyyyzhu/trim-sod-supp4>  
+  - 🔗 <https://www.kaggle.com/datasets/tonyyyyzhu/trim-sod-supp5>
 
-3. Run the following command from the root of this repository to
-   download and extract the dataset:
+> **Note:** Download **all six** parts and extract them into the **same root directory** so their contents are merged.
 
-   ```bash
-   kaggle datasets download -d tonyyyyzhu/trim-sod-a-spacecraft-optical-dataset -p data --unzip
-   ```
+---
 
-   This will create a `data/` directory containing all images and labels.
+## Quick Download (Kaggle CLI)
+
+1) **Install & authenticate**
+```bash
+pip install kaggle
+# Then place kaggle.json (Account → Create New API Token) at:
+# Linux/Mac: ~/.kaggle/kaggle.json    Windows: %USERPROFILE%\.kaggle\kaggle.json
+chmod 600 ~/.kaggle/kaggle.json  # Linux/Mac only
+
 
 ### Citation
 
