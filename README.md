@@ -63,7 +63,7 @@ kaggle datasets download -d tonyyyyzhu/trim-sod-a-spacecraft-optical-dataset -p 
 
 # Supplements (mostly visible-light additions)
 kaggle datasets download -d tonyyyyzhu/trim-sod-supp1   -p data/ --unzip
-kaggle datasets download -d tonyyyyzhu/trim-sod-supp2  -p data/ --unzip
+kaggle datasets download -d tonyyyyzhu/trim-sod-supp2   -p data/ --unzip
 kaggle datasets download -d tonyyyyzhu/trim-sod-supp3   -p data/ --unzip
 kaggle datasets download -d tonyyyyzhu/trim-sod-supp4   -p data/ --unzip
 kaggle datasets download -d tonyyyyzhu/trim-sod-supp5   -p data/ --unzip
