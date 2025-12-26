@@ -41,7 +41,7 @@ The dataset is released in **PNG (uncompressed)** format and split into multiple
   - 🔗 <https://www.kaggle.com/datasets/tonyyyyzhu/trim-sod-supp4>  
   - 🔗 <https://www.kaggle.com/datasets/tonyyyyzhu/trim-sod-supp5>
 
-- **JPG Version (Compressed)**  
+- **JPG Version (Compressed, The whole dataset)**  
   - 🔗 <https://www.kaggle.com/datasets/tonyyyyzhu/trim-sod-jpgversion>
 
 
