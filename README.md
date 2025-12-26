@@ -29,7 +29,7 @@ The acquisition and application of spacecraft optical data is an important part 
 
 ## 📦 Dataset Access (Kaggle)
 
-The dataset is large and released as **six parts** on Kaggle:
+The dataset is released in **PNG (uncompressed)** format and split into multiple parts on Kaggle:
 
 - **Main package**  
   - 🔗 <https://www.kaggle.com/datasets/tonyyyyzhu/trim-sod-a-spacecraft-optical-dataset>
@@ -41,8 +41,8 @@ The dataset is large and released as **six parts** on Kaggle:
   - 🔗 <https://www.kaggle.com/datasets/tonyyyyzhu/trim-sod-supp4>  
   - 🔗 <https://www.kaggle.com/datasets/tonyyyyzhu/trim-sod-supp5>
 
-- **JPG Version (Compressed, easier to download)**  
-  🔗 <https://www.kaggle.com/datasets/tonyyyyzhu/trim-sod-jpgversion>
+- **JPG Version (Compressed)**  
+  - 🔗 <https://www.kaggle.com/datasets/tonyyyyzhu/trim-sod-jpgversion>
 
 
 ---
