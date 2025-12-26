@@ -41,6 +41,9 @@ The dataset is large and released as **six parts** on Kaggle:
   - 🔗 <https://www.kaggle.com/datasets/tonyyyyzhu/trim-sod-supp4>  
   - 🔗 <https://www.kaggle.com/datasets/tonyyyyzhu/trim-sod-supp5>
 
+- **JPG Version (Compressed, easier to download)**  
+  🔗 <https://www.kaggle.com/datasets/tonyyyyzhu/trim-sod-jpgversion>
+
 
 ---
 
