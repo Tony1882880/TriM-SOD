@@ -97,12 +97,13 @@ TriM-SOD/
 If you use **TriM-SOD** in your research, please cite the accompanying paper:
 
 ~~~bibtex
-@article{TriM-SOD,
-  title   = {TriM-SOD: A Multi-modal, Multi-task, and Multi-scale Spacecraft Optical Dataset},
-  author  = {Zhu, Tianyu and Li, Hesong and Fu, Ying},
-  journal = {Space: Science \& Technology},
-  year    = {2025},
-  publisher = {AAAS}
+@article{TriMSOD,
+	title={TriM-SOD: A Multi-Modal, Multi-Task, and Multi-Scale Spacecraft Optical Dataset},
+	author={Zhu, Tianyu and Li, Hesong and Fu, Ying},
+	journal={Space: Science \& Technology},
+	year={2025},
+	volume = {5},
+	pages = {0299}
 }
 ~~~
 
